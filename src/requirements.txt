@@ -1,0 +1,5 @@
+pandas>=2.0
+numpy>=1.24
+pyodbc>=5.0        # SQL Server access (not needed for --dry-run)
+flask>=3.0         # API ingestion feed (attrition_api.py)
+requests>=2.31     # API ingestion client (attrition_api_client.py)
