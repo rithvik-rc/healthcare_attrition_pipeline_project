@@ -399,7 +399,7 @@ class PipelineSwitch(unittest.TestCase):
             pipe.parse_args(["--source", "ftp"])
 
     def test_run_uses_the_selected_path(self):
-        from test_attrition_pipeline_flow import Db, GOOD_STATS
+        from tests.test_attrition_pipeline_flow import Db, GOOD_STATS
         calls = []
         with mock.patch.object(pipe.ingest, "run_ingest", lambda *a, **k: calls.append("csv") or dict(GOOD_STATS)), \
              mock.patch.object(pipe.api_client, "run_api_ingest", lambda *a, **k: calls.append("api") or dict(GOOD_STATS)):
@@ -409,7 +409,7 @@ class PipelineSwitch(unittest.TestCase):
         self.assertEqual(calls, ["csv", "api", "csv"])
 
     def test_api_failure_is_a_pipeline_error_exit_2(self):
-        from test_attrition_pipeline_flow import Db
+        from tests.test_attrition_pipeline_flow import Db
 
         def down(*a, **k):
             raise pipe.api_client.ApiError("cannot reach http://127.0.0.1:5000")
