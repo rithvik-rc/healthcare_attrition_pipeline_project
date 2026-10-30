@@ -5,7 +5,7 @@
 
 This project is a personal implementation of a healthcare attrition data pipeline that extracts, loads, and transforms data sources into metrics that help calculate insurance churn rate. Bridges multiple parts of the data engineering and visualization process into one codebase.
 
-![alt text](docs/tableau_overview.png)
+![alt text](tableau_overview.png)
 
 ## Why I Built This
 
@@ -29,7 +29,7 @@ This project was the result of my interest in developing a thorough understandin
 
 ## Architecture
 
-![alt text](docs/Attrition_Pipeline_Flowchart.png)
+![alt text](Attrition_Pipeline_Flowchart.png)
 
 Here is the pipeline in six phases, each with the technology it uses.
 
